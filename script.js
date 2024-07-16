@@ -53,11 +53,11 @@ function clicarCelula(event) {
     if (matriz[linha][coluna] != 0) {
         celula.classList.add("navio");
         if (matriz[linha][coluna] === 5) {
-            celula.src = "Ship-1.png";
+            celula.src = "../Ship-1.png";
         } else if (matriz[linha][coluna] === 7) {
-            celula.src = "Ship-2.png";
+            celula.src = "../Ship-2.png";
         } else if (matriz[linha][coluna] === 9) {
-            celula.src = "Ship-3.png";
+            celula.src = "../Ship-3.png";
         }
         celula.classList.remove("coberta");
         verificarFimDeJogo();
