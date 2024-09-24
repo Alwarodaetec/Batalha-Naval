@@ -122,7 +122,7 @@ function verificarFimDeJogo(matriz) {
 
 //Função para recomeçar o jogo
 function redirecionarParaPagina(){
-    window.location.href = 'meuJogo.html';
+    window.location.href = 'index.html';
 }
 let matriz = criarMatriz(10);
 adicionarElemento(matriz, 9, 8);
@@ -130,40 +130,6 @@ adicionarElemento(matriz, 5, 4);
 adicionarElemento(matriz, 7, 6);
 //exibirMatriz(matriz);
 //criarTabuleiro(matriz);
-
-
-
-
-
-
-
-
-
-
-/*
-function criarMatriz(tamanho) {
-    let matriz = [];
-    for (let i = 0; i < tamanho; i++) {
-        matriz[i] = [];
-        for (let j = 0; j < tamanho; j++) {
-            matriz[i][j] = 0;
-        }
-    }
-    return matriz;
-}
-
-function adicionarElemento(matriz, indiceElemento, quantidadeElemento) {
-    for (let i = 0; i < quantidadeElemento; i++) {
-        let linha = Math.floor(Math.random() * matriz.length);
-        let coluna = Math.floor(Math.random() * matriz.length);
-
-        while (matriz[linha][coluna] !== 0) {
-            linha = Math.floor(Math.random() * matriz.length);
-            coluna = Math.floor(Math.random() * matriz.length);
-        }
-        matriz[linha][coluna] = indiceElemento;
-    }
-}*/
 
 function criarTabuleiro(matriz) {
     let tabela = document.createElement("table");
@@ -208,21 +174,7 @@ function clicarCelula(event) {
         celula.classList.remove("coberta");
     }
 }
-/*
-function verificarFimDeJogo() {
-    let naviosRestantes = 0;
-    for (let i = 0; i < matriz.length; i++) {
-        for (let j = 0; j < matriz.length; j++) {
-            if (matriz[i][j] !== 0 && document.querySelector(`[data-linha="${i}"][data-coluna="${j}"]`).classList.contains("coberta")) {
-                naviosRestantes++;
-            }
-        }
-    }
-    if (naviosRestantes === 0) {
-        alert("Todos os navios foram afundados! Fim de jogo.");
-    }
-}
-*/
+
 function iniciarJogo() {
     document.querySelector('.start-button').classList.add('hidden');
     document.querySelector('.image-section').classList.add('hidden');
@@ -234,8 +186,3 @@ function iniciarJogo() {
     adicionarElemento(matriz, 7, 6);
     criarTabuleiro(matriz);
 }
-/*
-function redirecionarParaPagina() {
-    window.location.href = 'meuJogo.html';
-}
-*/
